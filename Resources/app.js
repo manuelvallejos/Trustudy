@@ -77,14 +77,6 @@ var viewContainer4 = Ti.UI.createScrollView({
 });
 
 
-var redview = Ti.UI.createView({
-    top:0,
-	left:0,
-    width:Ti.UI.FILL,
-    height:60,
-	backgroundColor : '#953735'
-});
-
 var redview1 = Ti.UI.createView({
     top:0,
 	left:0,
@@ -153,7 +145,8 @@ var tab1 = Ti.UI.createView({
 	borderColor: "#cccccc",
 	borderRadius :1,
 	height : Ti.UI.FILL,
-	width : '25%'
+	width : '25%',
+	layout: 'vertical'
 });
 
 
@@ -164,7 +157,9 @@ var tab2 = Ti.UI.createView({
 	borderColor: "#cccccc",
 	borderRadius :1,
 	height : Ti.UI.FILL,
-	width : '25%'
+	width : '25%',
+	layout: 'vertical'
+
 });
 
 var tab3 = Ti.UI.createView({
@@ -174,7 +169,8 @@ var tab3 = Ti.UI.createView({
 	borderColor: "#cccccc",
 	borderRadius :1,
 	height : Ti.UI.FILL,
-	width : '25%'
+	width : '25%',
+	layout: 'vertical'	
 });
 
 var tab4 = Ti.UI.createView({
@@ -184,7 +180,8 @@ var tab4 = Ti.UI.createView({
 	borderColor: "#cccccc",
 	borderRadius :1,
 	height : Ti.UI.FILL,
-	width : '25%'
+	width : '25%',
+	layout: 'vertical'	
 });
 
 //Labels describing each custom tab view
@@ -224,11 +221,48 @@ var label4 = Ti.UI.createLabel({
 	text : 'Ask',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
-		fontSize : 24
+		fontSize : 18
 	},
 	color : 'white'
 
 });
+
+var image1 = Ti.UI.createImageView({
+	image: '/icons/2_action_about.png',
+	zindex: 1,
+	top: 10
+});
+
+var image2 = Ti.UI.createImageView({
+	image: 'http://docs.appcelerator.com/titanium/latest/resources/images/appc_logo.png',
+	zindex: 1,
+	top: 10
+});
+
+var image3 = Ti.UI.createImageView({
+	image: 'http://docs.appcelerator.com/titanium/latest/resources/images/appc_logo.png',
+	zindex: 1,
+	top: 10
+});
+
+var image4 = Ti.UI.createImageView({
+	image: 'http://docs.appcelerator.com/titanium/latest/resources/images/appc_logo.png',
+	zindex: 1,
+	top: 10
+});
+
+var logo = Ti.UI.createImageView({
+	image: 	'http://trustudy.us/templates/ja_university/themes/purple/images/logo.png',
+	zindex: 1,
+	top: 8,
+	left: 4
+});
+
+redview1.add(logo);
+tab1.add(image1);
+tab2.add(image2);
+tab3.add(image3);
+tab4.add(image4);
 
 //adding the labels to tabs and the tabs to the container
 tab1.add(label1);
