@@ -8,25 +8,25 @@ var win = Titanium.UI.createWindow({
 
 //-------Views to hold content-------
 
-var winView1 = Ti.UI.createScrollView({
+var winView1 = Ti.UI.createView({
 	top: 0,
 	height: '90%',
 	backgroundColor: 'white',
 });
 
-var winView2 = Ti.UI.createScrollView({
+var winView2 = Ti.UI.createView({
 	top: 0,
 	height: '90%',
 	backgroundColor: 'white'
 });
 
-var winView3 = Ti.UI.createScrollView({
+var winView3 = Ti.UI.createView({
 	top: 0,
 	height: '90%',
 	backgroundColor: 'white'
 });
 
-var winView4 = Ti.UI.createScrollView({
+var winView4 = Ti.UI.createView({
 	top: 0,
 	height: '90%',
 	backgroundColor: 'white'
@@ -40,16 +40,42 @@ var winView4 = Ti.UI.createScrollView({
 
 
 
-var viewContainer1 = Ti.UI.createView({
+var viewContainer1 = Ti.UI.createScrollView({
 	height: '100%',
 	width: '100%',
 	layout: 'vertical',
-	backgroundColor: 'white',
-	opacity: 0.4,
 	borderColor: 'black',
 	borderWidth: 1,
 	borderRadius :1
 });
+
+var viewContainer2 = Ti.UI.createScrollView({
+	height: '100%',
+	width: '100%',
+	layout: 'vertical',
+	borderColor: 'black',
+	borderWidth: 1,
+	borderRadius :1
+});
+
+var viewContainer3 = Ti.UI.createScrollView({
+	height: '100%',
+	width: '100%',
+	layout: 'vertical',
+	borderColor: 'black',
+	borderWidth: 1,
+	borderRadius :1
+});
+
+var viewContainer4 = Ti.UI.createScrollView({
+	height: '100%',
+	width: '100%',
+	layout: 'vertical',
+	borderColor: 'black',
+	borderWidth: 1,
+	borderRadius :1
+});
+
 
 var redview = Ti.UI.createView({
     top:0,
@@ -58,9 +84,51 @@ var redview = Ti.UI.createView({
     height:60,
 	backgroundColor : '#953735'
 });
-viewContainer1.add(redview);
 
+var redview1 = Ti.UI.createView({
+    top:0,
+	left:0,
+    width:Ti.UI.FILL,
+    height:60,
+	backgroundColor : '#953735'
+});
+
+var redview2 = Ti.UI.createView({
+    top:0,
+	left:0,
+    width:Ti.UI.FILL,
+    height:60,
+	backgroundColor : '#953735'
+});
+
+var redview3 = Ti.UI.createView({
+    top:0,
+	left:0,
+    width:Ti.UI.FILL,
+    height:60,
+	backgroundColor : '#953735'
+});
+
+var redview4 = Ti.UI.createView({
+    top:0,
+	left:0,
+    width:Ti.UI.FILL,
+    height:60,
+	backgroundColor : '#953735'
+});
+
+
+viewContainer1.add(redview1);
 winView1.add(viewContainer1);
+
+viewContainer2.add(redview2);
+winView2.add(viewContainer2);
+
+viewContainer3.add(redview3);
+winView3.add(viewContainer3);
+
+viewContainer4.add(redview4);
+winView4.add(viewContainer4);
 
 
 //Tab container holds the custom tabgroup
@@ -219,5 +287,4 @@ tab4.addEventListener('click', function(e){
 	winView4.show();
 });
 
-winView1.show();
 win.open();
