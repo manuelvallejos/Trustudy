@@ -234,27 +234,27 @@ var image1 = Ti.UI.createImageView({
 });
 
 var image2 = Ti.UI.createImageView({
-	image: 'http://docs.appcelerator.com/titanium/latest/resources/images/appc_logo.png',
+	image: '/icons/9_av_upload.png',
 	zindex: 1,
 	top: 10
 });
 
 var image3 = Ti.UI.createImageView({
-	image: 'http://docs.appcelerator.com/titanium/latest/resources/images/appc_logo.png',
+	image: '/icons/6_social_add_group.png',
 	zindex: 1,
 	top: 10
 });
 
 var image4 = Ti.UI.createImageView({
-	image: 'http://docs.appcelerator.com/titanium/latest/resources/images/appc_logo.png',
+	image: '/icons/2_action_help.png',
 	zindex: 1,
 	top: 10
 });
 
 var logo = Ti.UI.createImageView({
-	image: 	'http://trustudy.us/templates/ja_university/themes/purple/images/logo.png',
+	image: '/icons/logo.png',
 	zindex: 1,
-	top: 8,
+	top: 4,
 	left: 4
 });
 
