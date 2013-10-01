@@ -41,16 +41,24 @@ var winView4 = Ti.UI.createScrollView({
 
 
 var viewContainer1 = Ti.UI.createView({
-	height: '90%',
+	height: '100%',
 	width: '100%',
 	layout: 'vertical',
 	backgroundColor: 'white',
-	opacity: 0.6,
+	opacity: 0.4,
 	borderColor: 'black',
-	borderWidth: 2,
-	borderColor: "#black",
+	borderWidth: 1,
 	borderRadius :1
 });
+
+var redview = Ti.UI.createView({
+    top:0,
+	left:0,
+    width:Ti.UI.FILL,
+    height:60,
+	backgroundColor : '#953735'
+});
+viewContainer1.add(redview);
 
 winView1.add(viewContainer1);
 
@@ -64,6 +72,7 @@ var tabContainer = Ti.UI.createView({
 	layout: 'horizontal'
 	
 });
+
 
 //----The custom tabs-----
 //they can also be defined with a background image
@@ -210,4 +219,5 @@ tab4.addEventListener('click', function(e){
 	winView4.show();
 });
 
+winView1.show();
 win.open();
