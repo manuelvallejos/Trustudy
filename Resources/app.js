@@ -187,7 +187,7 @@ var tab4 = Ti.UI.createView({
 //Labels describing each custom tab view
 
 var label1 = Ti.UI.createLabel({
-	text : 'Home',
+	text : 'Inicio',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
 		fontSize : 18
@@ -198,7 +198,7 @@ var label1 = Ti.UI.createLabel({
 
 
 var label2 = Ti.UI.createLabel({
-	text : 'Notes',
+	text : 'Apuntes',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
 		fontSize : 18
@@ -208,7 +208,7 @@ var label2 = Ti.UI.createLabel({
 });
 
 var label3 = Ti.UI.createLabel({
-	text : 'Answers',
+	text : 'Responde',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
 		fontSize : 18
@@ -218,7 +218,7 @@ var label3 = Ti.UI.createLabel({
 });
 
 var label4 = Ti.UI.createLabel({
-	text : 'Ask',
+	text : 'Pregunta',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
 		fontSize : 18
@@ -246,7 +246,7 @@ var image3 = Ti.UI.createImageView({
 });
 
 var image4 = Ti.UI.createImageView({
-	image: '/icons/2_action_help.png',
+	image: '/icons/2-action-help.png',
 	zindex: 1,
 	top: 10
 });
@@ -258,7 +258,36 @@ var logo = Ti.UI.createImageView({
 	left: 4
 });
 
+var logo2 = Ti.UI.createImageView({
+	image: '/icons/logo.png',
+	zindex: 1,
+	top: 4,
+	left: 4
+});
+
+var logo3 = Ti.UI.createImageView({
+	image: '/icons/logo.png',
+	zindex: 1,
+	top: 4,
+	left: 4
+});
+
+var logo4 = Ti.UI.createImageView({
+	image: '/icons/logo.png',
+	zindex: 1,
+	top: 4,
+	left: 4
+});
+
+
+
 redview1.add(logo);
+redview2.add(logo2);
+redview3.add(logo3);
+redview4.add(logo4);
+
+
+
 tab1.add(image1);
 tab2.add(image2);
 tab3.add(image3);
