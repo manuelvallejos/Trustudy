@@ -193,7 +193,7 @@ var label1 = Ti.UI.createLabel({
 	text : 'Home',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
-		fontSize : 24
+		fontSize : 18
 	},
 	color : 'white'
 
@@ -204,7 +204,7 @@ var label2 = Ti.UI.createLabel({
 	text : 'Notes',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
-		fontSize : 24
+		fontSize : 18
 	},
 	color : 'white'
 
@@ -214,7 +214,7 @@ var label3 = Ti.UI.createLabel({
 	text : 'Answers',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
-		fontSize : 24
+		fontSize : 18
 	},
 	color : 'white'
 
