@@ -1,7 +1,8 @@
 var win = Titanium.UI.createWindow({
   backgroundColor: 'gray',
     navBarHidden: true,
-	fullscreen: false
+	fullscreen: false,
+	exitOnClose: true
 });
 
 
@@ -38,7 +39,7 @@ var winView4 = Ti.UI.createView({
 	grid.drawgrid(20,winView3);
 	grid.drawgrid(20,winView4);
 
-
+//view Containers with Scroll View
 
 var viewContainer1 = Ti.UI.createScrollView({
 	height: '100%',
@@ -77,6 +78,8 @@ var viewContainer4 = Ti.UI.createScrollView({
 });
 
 
+// nav bars
+
 var redview1 = Ti.UI.createView({
     top:0,
 	left:0,
@@ -109,6 +112,8 @@ var redview4 = Ti.UI.createView({
 	backgroundColor : '#953735'
 });
 
+
+//adding Nav bars to View Containers
 
 viewContainer1.add(redview1);
 winView1.add(viewContainer1);
@@ -280,11 +285,14 @@ var logo4 = Ti.UI.createImageView({
 });
 
 
+// adding logo to navBar
 
 redview1.add(logo);
 redview2.add(logo2);
 redview3.add(logo3);
 redview4.add(logo4);
+
+// filling Containers
 
 
 
@@ -349,5 +357,7 @@ tab4.addEventListener('click', function(e){
 	winView3.hide();
 	winView4.show();
 });
+
+
 
 win.open();

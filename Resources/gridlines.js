@@ -25,4 +25,4 @@ top:0
 });
 win.add(vline);
 }
-}
+};
