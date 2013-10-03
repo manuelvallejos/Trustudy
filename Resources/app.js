@@ -157,27 +157,41 @@ viewContainer1.add(hola);
 //tableview viewContainer 1
 
 var sectionNotificaciones = Ti.UI.createTableViewSection({
-	 headerTitle: 'Fruit'
+	 headerTitle: 'Tú'
 });
+
 sectionNotificaciones.add(Ti.UI.createTableViewRow({
-	title: 'Apples',
-	backgroundColor: 'white'  
+	title: 'Boris ha hecho una pregunta en el curso CC5602',
+	backgroundColor: 'white',
+	font : {
+		fontSize : 18
+	}
 }));
 sectionNotificaciones.add(Ti.UI.createTableViewRow({
-	title: 'Tú',
-	backgroundColor: 'white' 
+	title: 'Valentina agradeció tu respuesta en el curso IN5625',
+	backgroundColor: 'white',
+	font : {
+		fontSize : 18
+	}	 
 }));
 
 var sectionCalendario = Ti.UI.createTableViewSection({ 
 	headerTitle: 'Tus ramos'
 });
 sectionCalendario.add(Ti.UI.createTableViewRow({ 
-	title: 'Carrots',
-	backgroundColor: 'white'
+	title: 'Claudia dijo que la prueba de IN5625 es el próximo martes',
+	backgroundColor: 'white',
+	font : {
+		fontSize : 18
+	}	
 }));
 sectionCalendario.add(Ti.UI.createTableViewRow({ 
-	title: 'Potatoes',
-	backgroundColor: 'white'
+	title: 'Guillermo dijo que la tarea de CC5602 tiene 3 días más de plazo',
+	backgroundColor: 'white',
+	font : {
+		fontSize : 18
+	},	
+	
 }));
 
 var table1 = Ti.UI.createTableView({
@@ -387,6 +401,7 @@ winView3.hide();
 win.add(winView4);
 winView4.hide();
 
+winView1.show();
 
 
 //----------------Tab Event Listeners------------
