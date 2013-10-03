@@ -390,18 +390,18 @@ tabContainer.add(tab3);
 tabContainer.add(tab4);
 
 
-win.add(winView1);
-
-win.add(winView2);
-winView2.hide();
-
-win.add(winView3);
-winView3.hide();
 
 win.add(winView4);
 winView4.hide();
 
-winView1.show();
+
+win.add(winView3);
+winView3.hide();
+
+win.add(winView2);
+winView2.hide();
+
+win.add(winView1);
 
 
 //----------------Tab Event Listeners------------
