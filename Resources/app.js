@@ -44,15 +44,17 @@ var winView4 = Ti.UI.createView({
 var viewContainer1 = Ti.UI.createScrollView({
 	height: '100%',
 	width: '100%',
+	top:60,
 	layout: 'vertical',
 	borderColor: 'black',
 	borderWidth: 1,
-	borderRadius :1
+	borderRadius :1,
 });
 
 var viewContainer2 = Ti.UI.createScrollView({
 	height: '100%',
 	width: '100%',
+	top:60,
 	layout: 'vertical',
 	borderColor: 'black',
 	borderWidth: 1,
@@ -62,6 +64,7 @@ var viewContainer2 = Ti.UI.createScrollView({
 var viewContainer3 = Ti.UI.createScrollView({
 	height: '100%',
 	width: '100%',
+	top:60,	
 	layout: 'vertical',
 	borderColor: 'black',
 	borderWidth: 1,
@@ -71,6 +74,7 @@ var viewContainer3 = Ti.UI.createScrollView({
 var viewContainer4 = Ti.UI.createScrollView({
 	height: '100%',
 	width: '100%',
+	top:60,	
 	layout: 'vertical',
 	borderColor: 'black',
 	borderWidth: 1,
@@ -128,34 +132,57 @@ winView4.add(redview4);
 winView4.add(viewContainer4);
 
 
-var sectionFruit = Ti.UI.createTableViewSection({
+//hola
+
+var hola = Ti.UI.createView({
+    width:Ti.UI.FILL,
+    height:60,
+	backgroundColor : 'white',	
+});
+
+var hola_usuario = Ti.UI.createLabel({
+	text : 'Hola Manuel',
+	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font : {
+		fontSize : 20
+	},
+	color : '#4A6F78'
+
+});
+
+hola.add(hola_usuario);
+viewContainer1.add(hola);
+
+
+//tableview viewContainer 1
+
+var sectionNotificaciones = Ti.UI.createTableViewSection({
 	 headerTitle: 'Fruit'
 });
-sectionFruit.add(Ti.UI.createTableViewRow({
+sectionNotificaciones.add(Ti.UI.createTableViewRow({
 	title: 'Apples',
 	backgroundColor: 'white'  
 }));
-sectionFruit.add(Ti.UI.createTableViewRow({
-	title: 'Bananas',
+sectionNotificaciones.add(Ti.UI.createTableViewRow({
+	title: 'Tú',
 	backgroundColor: 'white' 
 }));
 
-var sectionVeg = Ti.UI.createTableViewSection({ 
-	headerTitle: 'Vegetables'
+var sectionCalendario = Ti.UI.createTableViewSection({ 
+	headerTitle: 'Tus ramos'
 });
-sectionVeg.add(Ti.UI.createTableViewRow({ 
+sectionCalendario.add(Ti.UI.createTableViewRow({ 
 	title: 'Carrots',
 	backgroundColor: 'white'
 }));
-sectionVeg.add(Ti.UI.createTableViewRow({ 
+sectionCalendario.add(Ti.UI.createTableViewRow({ 
 	title: 'Potatoes',
 	backgroundColor: 'white'
 }));
 
 var table1 = Ti.UI.createTableView({
-  data: [sectionFruit, sectionVeg],
-  top: '60',
-  width: '90%'
+  data: [sectionNotificaciones, sectionCalendario],
+  height: '300'
 });
 
 viewContainer1.add(table1);
