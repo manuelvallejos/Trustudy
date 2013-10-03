@@ -5,11 +5,11 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.089000 seconds on emulator to get ready
+[DEBUG] waited 0.047000 seconds on emulator to get ready
 [DEBUG] com.appcelerator.trustudy installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\gridlines.js => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\gridlines.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\app.js => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\app.js
 [DEBUG] LiveView not enabled
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
@@ -103,6 +103,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.148000 seconds on emulator to get ready
+[DEBUG] waited 0.051000 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

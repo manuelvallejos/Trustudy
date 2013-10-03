@@ -115,17 +115,51 @@ var redview4 = Ti.UI.createView({
 
 //adding Nav bars to View Containers
 
-viewContainer1.add(redview1);
+winView1.add(redview1);
 winView1.add(viewContainer1);
 
-viewContainer2.add(redview2);
+winView2.add(redview2);
 winView2.add(viewContainer2);
 
-viewContainer3.add(redview3);
+winView3.add(redview3);
 winView3.add(viewContainer3);
 
-viewContainer4.add(redview4);
+winView4.add(redview4);
 winView4.add(viewContainer4);
+
+
+var sectionFruit = Ti.UI.createTableViewSection({
+	 headerTitle: 'Fruit'
+});
+sectionFruit.add(Ti.UI.createTableViewRow({
+	title: 'Apples',
+	backgroundColor: 'white'  
+}));
+sectionFruit.add(Ti.UI.createTableViewRow({
+	title: 'Bananas',
+	backgroundColor: 'white' 
+}));
+
+var sectionVeg = Ti.UI.createTableViewSection({ 
+	headerTitle: 'Vegetables'
+});
+sectionVeg.add(Ti.UI.createTableViewRow({ 
+	title: 'Carrots',
+	backgroundColor: 'white'
+}));
+sectionVeg.add(Ti.UI.createTableViewRow({ 
+	title: 'Potatoes',
+	backgroundColor: 'white'
+}));
+
+var table1 = Ti.UI.createTableView({
+  data: [sectionFruit, sectionVeg],
+  top: '60',
+  width: '90%'
+});
+
+viewContainer1.add(table1);
+
 
 
 //Tab container holds the custom tabgroup
