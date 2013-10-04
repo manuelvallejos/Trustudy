@@ -202,6 +202,72 @@ var table1 = Ti.UI.createTableView({
 viewContainer1.add(table1);
 
 
+//tableview viewContainer 3
+
+var sectionTusRamos = Ti.UI.createTableViewSection({
+	 headerTitle: 'Tus Ramos'
+});
+
+sectionTusRamos.add(Ti.UI.createTableViewRow({
+	title: 'Boris ha hecho una pregunta en el curso CC5602',
+	backgroundColor: 'white',
+	font : {
+		fontSize : 18
+	}
+}));
+sectionTusRamos.add(Ti.UI.createTableViewRow({
+	title: 'Valentina agradeció tu respuesta en el curso IN5625',
+	backgroundColor: 'white',
+	font : {
+		fontSize : 18
+	}	 
+}));
+
+var sectionOtrosRamos = Ti.UI.createTableViewSection({ 
+	headerTitle: 'Otros ramos'
+});
+sectionOtrosRamos.add(Ti.UI.createTableViewRow({ 
+	title: 'Claudia dijo que la prueba de IN5625 es el próximo martes',
+	backgroundColor: 'white',
+	font : {
+		fontSize : 18
+	}	
+}));
+sectionOtrosRamos.add(Ti.UI.createTableViewRow({ 
+	title: 'Guillermo dijo que la tarea de CC5602 tiene 3 días más de plazo',
+	backgroundColor: 'white',
+	font : {
+		fontSize : 18
+	},	
+	
+}));
+
+var table2 = Ti.UI.createTableView({
+  data: [sectionTusRamos, sectionOtrosRamos],
+  height: '300'
+});
+
+viewContainer3.add(table2);
+
+//view Container 4
+
+	var label = Ti.UI.createLabel({
+		color:'#000000',
+		text:String.format(L('pregunta')),
+		height:'auto',
+		width:'auto'
+	});
+	
+	var textFieldAnswer = Ti.UI.createTextField({
+	  color:"#000",
+	  borderColor : 'none',
+	  width: 380,
+	  height:70,
+	  top: 300,
+	  left:60,	  
+	  hintText: 'Escribe aquí tu respuesta'
+	});
+
 
 //Tab container holds the custom tabgroup
 

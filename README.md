@@ -1,4 +1,0 @@
-Trustudy
-========
-
-Trustudy

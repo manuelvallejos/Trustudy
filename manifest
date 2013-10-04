@@ -1,8 +1,9 @@
-#appname:Positioning
-#publisher:Leandoers
-#url:http://leandoers.com
-#image:appicon.png
-#appid:com.appcelerator.trustudy
-#desc:not specified
-#type:ipad
-#guid:09c61b5b-0c89-4da6-b63a-732785afedf5
+#appname: Trustudy
+#appid: com.trustudy
+#type: mobile
+#guid: 25b3c9db-29d1-4208-9eb9-db2769452455
+#version: 1.0
+#publisher: not specified
+#url: not specified
+#image: appicon.png
+#desc: not specified
