@@ -71,7 +71,7 @@ var viewContainer3 = Ti.UI.createScrollView({
 	borderRadius :1
 });
 
-var viewContainer4 = Ti.UI.createScrollView({
+var viewContainer4 = Ti.UI.createView({
 	height: '100%',
 	width: '100%',
 	top:60,	
@@ -251,22 +251,49 @@ viewContainer3.add(table2);
 
 //view Container 4
 
-	var label = Ti.UI.createLabel({
-		color:'#000000',
-		text:String.format(L('pregunta')),
-		height:'auto',
-		width:'auto'
-	});
+var pickerRamo = Ti.UI.createPicker({
+	top: 20,
+	width: '94%'
+});
+
+var data = [];
+data[0]=Ti.UI.createPickerRow({title:'Selecciona el curso'});
+data[1]=Ti.UI.createPickerRow({title:'CC5602'});
+data[2]=Ti.UI.createPickerRow({title:'IN5625'});
+data[3]=Ti.UI.createPickerRow({title:'MA1002'});
+
+pickerRamo.add(data);	
 	
-	var textFieldAnswer = Ti.UI.createTextField({
-	  color:"#000",
-	  borderColor : 'none',
-	  width: 380,
-	  height:70,
-	  top: 300,
-	  left:60,	  
-	  hintText: 'Escribe aquí tu respuesta'
-	});
+var textFieldQuestion = Ti.UI.createTextArea({
+  color:"#000",
+  borderColor : 'none',
+  width: '92%',
+  height: 210,
+  top: 10,
+  hintText: 'Escribe tu pregunta'
+});
+
+win.addEventListener('load', function(){
+  textFieldQuestion.blur();
+});
+
+var buttonAdjuntar = Ti.UI.createButton({
+	top: 10,
+	width: '94%',
+	title: 'Adjuntar apunte (opcional)',
+});
+
+var buttonEnviar = Ti.UI.createButton({
+	top: 10,
+	width: '94%',
+	title: 'Enviar Pregunta'
+});
+
+
+viewContainer4.add(pickerRamo);
+viewContainer4.add(textFieldQuestion);
+viewContainer4.add(buttonAdjuntar);
+viewContainer4.add(buttonEnviar);
 
 
 //Tab container holds the custom tabgroup
