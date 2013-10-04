@@ -41,7 +41,7 @@ var winView4 = Ti.UI.createView({
 
 //view Containers with Scroll View
 
-var viewContainer1 = Ti.UI.createScrollView({
+var viewContainer1 = Ti.UI.createView({
 	height: '100%',
 	width: '100%',
 	top:60,
@@ -161,7 +161,7 @@ var viewTu = Ti.UI.createView({
     width:Ti.UI.FILL,
 	backgroundColor : '#4A6F78',
 	layout: 'horizontal',
-	height: 45	
+	height: 55	
 });
 
 var labelTu = Ti.UI.createLabel({
@@ -172,34 +172,35 @@ var labelTu = Ti.UI.createLabel({
 		fontWeight: 'bold'
 	},
 	color : 'white',
-	width: '48%',
-	borderColor: 'gray'
+	width: '49%',
+	borderColor: 'gray',
+	bottom: 9
 });
 
 var viewSeparator = Ti.UI.createView({
-    width: '2%',
-	backgroundColor : 'white',
+    width: '1%',
+	backgroundColor : 'white'
 });
 
-var labelTusAmigos = Ti.UI.createLabel({
-	text : 'Tus Amigos',
+var labelAmigos = Ti.UI.createLabel({
+	text : 'Amigos',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
 		fontSize : 26,
 		fontWeight: 'bold'
 	},
 	color : 'white',
-	width: '48%',
-	borderColor: 'gray'
+	width: '49%',
+	borderColor: 'gray',
+	bottom: 9
 });
 
 viewTu.add(labelTu);
-viewTu.add(labelTusAmigos);
+viewTu.add(viewSeparator);
+viewTu.add(labelAmigos);
 viewContainer1.add(viewTu);
 
-
 //tableview viewContainer 1
-
 
 //view Container 4
 
@@ -216,7 +217,7 @@ data[3]=Ti.UI.createPickerRow({title:'MA1002'});
 
 pickerRamo.add(data);	
 	
-var textFieldQuestion = Ti.UI.createTextArea({
+var textAreaQuestion = Ti.UI.createTextArea({
   color:"#000",
   borderColor : 'none',
   height: 240,
@@ -225,7 +226,7 @@ var textFieldQuestion = Ti.UI.createTextArea({
 });
 
 win.addEventListener('load', function(){
-  textFieldQuestion.blur();
+  textAreaQuestion.blur();
 });
 
 var buttonAdjuntar = Ti.UI.createButton({
@@ -247,11 +248,8 @@ viewButtons.add(buttonAdjuntar);
 viewButtons.add(buttonEnviar);
 	
 viewContainer4.add(pickerRamo);
-viewContainer4.add(textFieldQuestion);
+viewContainer4.add(textAreaQuestion);
 viewContainer4.add(viewButtons);
-
-
-
 
 //Tab container holds the custom tabgroup
 
@@ -260,9 +258,7 @@ var tabContainer = Ti.UI.createView({
 	height: '10%',
 	width: Ti.UI.FILL,
 	layout: 'horizontal'
-	
 });
-
 
 //----The custom tabs-----
 //they can also be defined with a background image
