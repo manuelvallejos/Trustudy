@@ -267,8 +267,7 @@ pickerRamo.add(data);
 var textFieldQuestion = Ti.UI.createTextArea({
   color:"#000",
   borderColor : 'none',
-  width: '92%',
-  height: 210,
+  height: 140,
   top: 10,
   hintText: 'Escribe tu pregunta'
 });
@@ -277,23 +276,38 @@ win.addEventListener('load', function(){
   textFieldQuestion.blur();
 });
 
+
+viewPregunta = Ti.UI.createView({
+	layout: 'horizontal',
+	top: 10
+});
+
+var viewButtons = Ti.UI.createView({
+	layout: 'vertical',
+});
+
 var buttonAdjuntar = Ti.UI.createButton({
-	top: 10,
-	width: '94%',
-	title: 'Adjuntar apunte (opcional)',
+	title: 'Adjuntar',
+	image: 'icons/5_content_new_attachment.png'
 });
 
 var buttonEnviar = Ti.UI.createButton({
-	top: 10,
-	width: '94%',
-	title: 'Enviar Pregunta'
+	title: 'Enviar',
+	image: 'icons/1-navigation-next-item.png'
 });
 
 
+viewButtons.add(buttonAdjuntar);
+viewButtons.add(buttonEnviar);
+
+
+viewPregunta.add(textFieldQuestion);
+viewPregunta.add(viewButtons);
+
 viewContainer4.add(pickerRamo);
-viewContainer4.add(textFieldQuestion);
-viewContainer4.add(buttonAdjuntar);
-viewContainer4.add(buttonEnviar);
+viewContainer4.add(viewPregunta);
+
+
 
 
 //Tab container holds the custom tabgroup
