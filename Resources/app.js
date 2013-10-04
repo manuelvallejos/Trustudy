@@ -200,7 +200,51 @@ viewTu.add(viewSeparator);
 viewTu.add(labelAmigos);
 viewContainer1.add(viewTu);
 
-//tableview viewContainer 1
+// view Container 2
+
+//Apuntes
+
+var apuntes = Ti.UI.createView({
+    width:Ti.UI.FILL,
+    height:60,
+	backgroundColor : 'white'
+});
+
+var labelApuntes = Ti.UI.createLabel({
+	text : 'Apuntes',
+	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font : {
+		fontSize : 30
+	},
+	color : '#4A6F78'
+
+});
+
+apuntes.add(labelApuntes);
+viewContainer2.add(apuntes);
+
+// view Container 2
+
+//Respuestas
+
+var respuestas = Ti.UI.createView({
+    width:Ti.UI.FILL,
+    height:60,
+	backgroundColor : 'white'
+});
+
+var labelRespuestas = Ti.UI.createLabel({
+	text : 'Respuestas',
+	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font : {
+		fontSize : 30
+	},
+	color : '#4A6F78'
+
+});
+
+respuestas.add(labelRespuestas);
+viewContainer3.add(respuestas);
 
 //view Container 4
 
@@ -220,7 +264,7 @@ pickerRamo.add(data);
 var textAreaQuestion = Ti.UI.createTextArea({
   color:"#000",
   borderColor : 'none',
-  height: 240,
+  height: 180,
   width: '93%',
   hintText: 'Escribe tu pregunta'
 });
@@ -246,6 +290,28 @@ var viewButtons = Ti.UI.createView({
 
 viewButtons.add(buttonAdjuntar);
 viewButtons.add(buttonEnviar);
+
+//Preguntas
+
+var preguntas = Ti.UI.createView({
+    width:Ti.UI.FILL,
+    height:60,
+	backgroundColor : 'white'
+});
+
+var labelPreguntas = Ti.UI.createLabel({
+	text : 'Preguntas',
+	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font : {
+		fontSize : 30
+	},
+	color : '#4A6F78'
+
+});
+
+preguntas.add(labelPreguntas);
+viewContainer4.add(preguntas);
+
 	
 viewContainer4.add(pickerRamo);
 viewContainer4.add(textAreaQuestion);
@@ -255,7 +321,7 @@ viewContainer4.add(viewButtons);
 
 var tabContainer = Ti.UI.createView({
 	bottom:0,
-	height: '10%',
+	height: '80px',
 	width: Ti.UI.FILL,
 	layout: 'horizontal'
 });
@@ -285,7 +351,6 @@ var tab2 = Ti.UI.createView({
 	height : Ti.UI.FILL,
 	width : '25%',
 	layout: 'vertical'
-
 });
 
 var tab3 = Ti.UI.createView({
@@ -310,71 +375,28 @@ var tab4 = Ti.UI.createView({
 	layout: 'vertical'	
 });
 
-//Labels describing each custom tab view
-
-var label1 = Ti.UI.createLabel({
-	text : 'Inicio',
-	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
-	font : {
-		fontSize : 18
-	},
-	color : 'white'
-
-});
-
-
-var label2 = Ti.UI.createLabel({
-	text : 'Apuntes',
-	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
-	font : {
-		fontSize : 18
-	},
-	color : 'white'
-
-});
-
-var label3 = Ti.UI.createLabel({
-	text : 'Responde',
-	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
-	font : {
-		fontSize : 18
-	},
-	color : 'white'
-
-});
-
-var label4 = Ti.UI.createLabel({
-	text : 'Pregunta',
-	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
-	font : {
-		fontSize : 18
-	},
-	color : 'white'
-
-});
-
 var image1 = Ti.UI.createImageView({
 	image: '/icons/2_action_about.png',
 	zindex: 1,
-	top: 10
+	top: 20
 });
 
 var image2 = Ti.UI.createImageView({
 	image: '/icons/9_av_upload.png',
 	zindex: 1,
-	top: 10
+	top: 20
 });
 
 var image3 = Ti.UI.createImageView({
-	image: '/icons/6_social_add_group.png',
+	image: '/icons/6_social_group.png',
 	zindex: 1,
-	top: 10
+	top: 20
 });
 
 var image4 = Ti.UI.createImageView({
-	image: '/icons/2-action-help.png',
+	image: '/icons/2_action_help.png',
 	zindex: 1,
-	top: 10
+	top: 20
 });
 
 var logo = Ti.UI.createImageView({
@@ -415,18 +437,10 @@ redview4.add(logo4);
 
 // filling Containers
 
-
-
 tab1.add(image1);
 tab2.add(image2);
 tab3.add(image3);
 tab4.add(image4);
-
-//adding the labels to tabs and the tabs to the container
-tab1.add(label1);
-tab2.add(label2);
-tab3.add(label3);
-tab4.add(label4);
 
 win.add(tabContainer);
 
@@ -435,11 +449,8 @@ tabContainer.add(tab2);
 tabContainer.add(tab3);
 tabContainer.add(tab4);
 
-
-
 win.add(winView4);
 winView4.hide();
-
 
 win.add(winView3);
 winView3.hide();
