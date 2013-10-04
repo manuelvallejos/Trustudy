@@ -234,7 +234,7 @@ var respuestas = Ti.UI.createView({
 });
 
 var labelRespuestas = Ti.UI.createLabel({
-	text : 'Respuestas',
+	text : 'Responde',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
 		fontSize : 30
@@ -300,13 +300,12 @@ var preguntas = Ti.UI.createView({
 });
 
 var labelPreguntas = Ti.UI.createLabel({
-	text : 'Preguntas',
+	text : 'Pregunta',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
 		fontSize : 30
 	},
 	color : '#4A6F78'
-
 });
 
 preguntas.add(labelPreguntas);
@@ -377,26 +376,22 @@ var tab4 = Ti.UI.createView({
 
 var image1 = Ti.UI.createImageView({
 	image: '/icons/2_action_about.png',
-	zindex: 1,
-	top: 20
+	zindex: 1
 });
 
 var image2 = Ti.UI.createImageView({
 	image: '/icons/9_av_upload.png',
-	zindex: 1,
-	top: 20
+	zindex: 1
 });
 
 var image3 = Ti.UI.createImageView({
 	image: '/icons/6_social_group.png',
-	zindex: 1,
-	top: 20
+	zindex: 1
 });
 
 var image4 = Ti.UI.createImageView({
 	image: '/icons/2_action_help.png',
-	zindex: 1,
-	top: 20
+	zindex: 1
 });
 
 var logo = Ti.UI.createImageView({
@@ -437,10 +432,44 @@ redview4.add(logo4);
 
 // filling Containers
 
-tab1.add(image1);
-tab2.add(image2);
-tab3.add(image3);
+var viewSelectedTab1 = Ti.UI.createView({
+	top:0,
+	height: '20',
+	width: Ti.UI.FILL
+});
+
+var viewSelectedTab2 = Ti.UI.createView({
+	top:0,
+	height: '20',
+	width: Ti.UI.FILL
+});
+
+var viewSelectedTab3 = Ti.UI.createView({
+	top:0,
+	height: '20',
+	width: Ti.UI.FILL
+});
+
+var viewSelectedTab4 = Ti.UI.createView({
+	top:0,
+	height: '20',
+	width: Ti.UI.FILL
+});
+
+
+
+tab4.add(viewSelectedTab4);
 tab4.add(image4);
+
+tab3.add(viewSelectedTab3);
+tab3.add(image3);
+
+tab2.add(viewSelectedTab2);
+tab2.add(image2);
+
+tab1.add(viewSelectedTab1);
+tab1.add(image1);
+
 
 win.add(tabContainer);
 
@@ -459,7 +488,8 @@ win.add(winView2);
 winView2.hide();
 
 win.add(winView1);
-
+viewSelectedTab1.setBackgroundColor('#4A6F78');	
+	
 
 //----------------Tab Event Listeners------------
 
@@ -468,6 +498,11 @@ tab1.addEventListener('click', function(e){
 	winView3.hide();
 	winView4.hide();
 	winView1.show();
+	viewSelectedTab1.setBackgroundColor('#4A6F78');	
+	viewSelectedTab2.setBackgroundColor('transparent');
+	viewSelectedTab3.setBackgroundColor('transparent');
+	viewSelectedTab4.setBackgroundColor('transparent');
+		
 });
 
 tab2.addEventListener('click', function(e){
@@ -475,6 +510,11 @@ tab2.addEventListener('click', function(e){
 	winView3.hide();
 	winView4.hide();
 	winView2.show();
+	viewSelectedTab2.setBackgroundColor('#4A6F78');
+	viewSelectedTab1.setBackgroundColor('transparent');
+	viewSelectedTab3.setBackgroundColor('transparent');
+	viewSelectedTab4.setBackgroundColor('transparent');
+
 });
 
 tab3.addEventListener('click', function(e){
@@ -482,6 +522,10 @@ tab3.addEventListener('click', function(e){
 	winView2.hide();
 	winView4.hide();
 	winView3.show();
+	viewSelectedTab3.setBackgroundColor('#4A6F78');
+	viewSelectedTab1.setBackgroundColor('transparent');
+	viewSelectedTab2.setBackgroundColor('transparent');
+	viewSelectedTab4.setBackgroundColor('transparent');
 });
 
 tab4.addEventListener('click', function(e){
@@ -489,6 +533,10 @@ tab4.addEventListener('click', function(e){
 	winView2.hide();
 	winView3.hide();
 	winView4.show();
+	viewSelectedTab4.setBackgroundColor('#4A6F78');
+	viewSelectedTab1.setBackgroundColor('transparent');
+	viewSelectedTab2.setBackgroundColor('transparent');
+	viewSelectedTab3.setBackgroundColor('transparent');
 });
 
 
