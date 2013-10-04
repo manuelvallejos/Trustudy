@@ -131,20 +131,22 @@ winView3.add(viewContainer3);
 winView4.add(redview4);
 winView4.add(viewContainer4);
 
+//ViewContainer 1
+
 
 //hola
 
 var hola = Ti.UI.createView({
     width:Ti.UI.FILL,
     height:60,
-	backgroundColor : 'white',	
+	backgroundColor : 'white'
 });
 
 var hola_usuario = Ti.UI.createLabel({
-	text : 'Hola Manuel',
+	text : 'Hola Manuel!',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
-		fontSize : 20
+		fontSize : 30
 	},
 	color : '#4A6F78'
 
@@ -153,101 +155,51 @@ var hola_usuario = Ti.UI.createLabel({
 hola.add(hola_usuario);
 viewContainer1.add(hola);
 
+// Tú
+
+var viewTu = Ti.UI.createView({
+    width:Ti.UI.FILL,
+	backgroundColor : '#4A6F78',
+	layout: 'horizontal',
+	height: 45	
+});
+
+var labelTu = Ti.UI.createLabel({
+	text : 'Tú',
+	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font : {
+		fontSize : 26,
+		fontWeight: 'bold'
+	},
+	color : 'white',
+	width: '48%',
+	borderColor: 'gray'
+});
+
+var viewSeparator = Ti.UI.createView({
+    width: '2%',
+	backgroundColor : 'white',
+});
+
+var labelTusAmigos = Ti.UI.createLabel({
+	text : 'Tus Amigos',
+	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font : {
+		fontSize : 26,
+		fontWeight: 'bold'
+	},
+	color : 'white',
+	width: '48%',
+	borderColor: 'gray'
+});
+
+viewTu.add(labelTu);
+viewTu.add(labelTusAmigos);
+viewContainer1.add(viewTu);
+
 
 //tableview viewContainer 1
 
-var sectionNotificaciones = Ti.UI.createTableViewSection({
-	 headerTitle: 'Tú'
-});
-
-sectionNotificaciones.add(Ti.UI.createTableViewRow({
-	title: 'Boris ha hecho una pregunta en el curso CC5602',
-	backgroundColor: 'white',
-	font : {
-		fontSize : 18
-	}
-}));
-sectionNotificaciones.add(Ti.UI.createTableViewRow({
-	title: 'Valentina agradeció tu respuesta en el curso IN5625',
-	backgroundColor: 'white',
-	font : {
-		fontSize : 18
-	}	 
-}));
-
-var sectionCalendario = Ti.UI.createTableViewSection({ 
-	headerTitle: 'Tus ramos'
-});
-sectionCalendario.add(Ti.UI.createTableViewRow({ 
-	title: 'Claudia dijo que la prueba de IN5625 es el próximo martes',
-	backgroundColor: 'white',
-	font : {
-		fontSize : 18
-	}	
-}));
-sectionCalendario.add(Ti.UI.createTableViewRow({ 
-	title: 'Guillermo dijo que la tarea de CC5602 tiene 3 días más de plazo',
-	backgroundColor: 'white',
-	font : {
-		fontSize : 18
-	},	
-	
-}));
-
-var table1 = Ti.UI.createTableView({
-  data: [sectionNotificaciones, sectionCalendario],
-  height: '300'
-});
-
-viewContainer1.add(table1);
-
-
-//tableview viewContainer 3
-
-var sectionTusRamos = Ti.UI.createTableViewSection({
-	 headerTitle: 'Tus Ramos'
-});
-
-sectionTusRamos.add(Ti.UI.createTableViewRow({
-	title: 'Boris ha hecho una pregunta en el curso CC5602',
-	backgroundColor: 'white',
-	font : {
-		fontSize : 18
-	}
-}));
-sectionTusRamos.add(Ti.UI.createTableViewRow({
-	title: 'Valentina agradeció tu respuesta en el curso IN5625',
-	backgroundColor: 'white',
-	font : {
-		fontSize : 18
-	}	 
-}));
-
-var sectionOtrosRamos = Ti.UI.createTableViewSection({ 
-	headerTitle: 'Otros ramos'
-});
-sectionOtrosRamos.add(Ti.UI.createTableViewRow({ 
-	title: 'Claudia dijo que la prueba de IN5625 es el próximo martes',
-	backgroundColor: 'white',
-	font : {
-		fontSize : 18
-	}	
-}));
-sectionOtrosRamos.add(Ti.UI.createTableViewRow({ 
-	title: 'Guillermo dijo que la tarea de CC5602 tiene 3 días más de plazo',
-	backgroundColor: 'white',
-	font : {
-		fontSize : 18
-	},	
-	
-}));
-
-var table2 = Ti.UI.createTableView({
-  data: [sectionTusRamos, sectionOtrosRamos],
-  height: '300'
-});
-
-viewContainer3.add(table2);
 
 //view Container 4
 
@@ -267,8 +219,8 @@ pickerRamo.add(data);
 var textFieldQuestion = Ti.UI.createTextArea({
   color:"#000",
   borderColor : 'none',
-  height: 140,
-  top: 10,
+  height: 240,
+  width: '93%',
   hintText: 'Escribe tu pregunta'
 });
 
@@ -276,36 +228,27 @@ win.addEventListener('load', function(){
   textFieldQuestion.blur();
 });
 
-
-viewPregunta = Ti.UI.createView({
-	layout: 'horizontal',
-	top: 10
-});
-
-var viewButtons = Ti.UI.createView({
-	layout: 'vertical',
-});
-
 var buttonAdjuntar = Ti.UI.createButton({
-	title: 'Adjuntar',
-	image: 'icons/5_content_new_attachment.png'
+    title: 'Adjuntar',
+    width: '50%'
 });
 
 var buttonEnviar = Ti.UI.createButton({
-	title: 'Enviar',
-	image: 'icons/1-navigation-next-item.png'
+    title: 'Enviar',
+    width: '50%'    
 });
 
+var viewButtons = Ti.UI.createView({
+	layout: 'horizontal',
+	width: '93%'
+});
 
 viewButtons.add(buttonAdjuntar);
 viewButtons.add(buttonEnviar);
-
-
-viewPregunta.add(textFieldQuestion);
-viewPregunta.add(viewButtons);
-
+	
 viewContainer4.add(pickerRamo);
-viewContainer4.add(viewPregunta);
+viewContainer4.add(textFieldQuestion);
+viewContainer4.add(viewButtons);
 
 
 
