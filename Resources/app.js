@@ -131,9 +131,6 @@ winView3.add(viewContainer3);
 winView4.add(redview4);
 winView4.add(viewContainer4);
 
-//ViewContainer 1
-
-
 //hola
 
 var hola = Ti.UI.createView({
@@ -155,9 +152,8 @@ var hola_usuario = Ti.UI.createLabel({
 hola.add(hola_usuario);
 viewContainer1.add(hola);
 
-// Tú
 
-var viewTu = Ti.UI.createView({
+var viewTuAmigos = Ti.UI.createView({
     width:Ti.UI.FILL,
 	backgroundColor : '#4A6F78',
 	layout: 'horizontal',
@@ -177,8 +173,14 @@ var labelTu = Ti.UI.createLabel({
 	bottom: 9
 });
 
+var viewContainerTu = Ti.UI.createView({
+	height: '100%',
+	width: '100%',
+	layout: 'vertical'
+});
+
 var viewSeparator = Ti.UI.createView({
-    width: '1%',
+    width: '0.5%',
 	backgroundColor : 'white'
 });
 
@@ -195,15 +197,41 @@ var labelAmigos = Ti.UI.createLabel({
 	bottom: 9
 });
 
-viewTu.add(labelTu);
-viewTu.add(viewSeparator);
-viewTu.add(labelAmigos);
-viewContainer1.add(viewTu);
+var viewContainerAmigos = Ti.UI.createView({
+	height: '100%',
+	width: '100%',
+	layout: 'vertical',
+	backgroundColor: 'gray'
+});
+
+var viewContainerScrollable = Ti.UI.createScrollableView({
+	views: [viewContainerTu, viewContainerAmigos],
+});
+
+
+//cambio
+labelAmigos.addEventListener('click',function(e){
+	viewContainerScrollable.setCurrentPage(1);
+});
+
+labelTu.addEventListener('click',function(e){
+	viewContainerScrollable.setCurrentPage(0);
+});
+
+
+
+//menu
+viewTuAmigos.add(labelTu);
+viewTuAmigos.add(viewSeparator);
+viewTuAmigos.add(labelAmigos);
+
+viewContainer1.add(viewTuAmigos);
+viewContainer1.add(viewContainerScrollable);
 
 // view Container 2
 
 //Apuntes
-
+	
 var apuntes = Ti.UI.createView({
     width:Ti.UI.FILL,
     height:60,
@@ -217,7 +245,6 @@ var labelApuntes = Ti.UI.createLabel({
 		fontSize : 30
 	},
 	color : '#4A6F78'
-
 });
 
 apuntes.add(labelApuntes);
@@ -538,7 +565,6 @@ tab4.addEventListener('click', function(e){
 	viewSelectedTab2.setBackgroundColor('transparent');
 	viewSelectedTab3.setBackgroundColor('transparent');
 });
-
 
 
 win.open();
