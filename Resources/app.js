@@ -136,14 +136,15 @@ winView4.add(viewContainer4);
 var hola = Ti.UI.createView({
     width:Ti.UI.FILL,
     height:60,
-	backgroundColor : 'white'
+	backgroundColor : 'white',
+	touchEnabled: false
 });
 
 var hola_usuario = Ti.UI.createLabel({
 	text : 'Hola Manuel!',
 	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font : {
-		fontSize : 30
+		fontSize : 25
 	},
 	color : '#4A6F78'
 
@@ -157,7 +158,7 @@ var viewTuAmigos = Ti.UI.createView({
     width:Ti.UI.FILL,
 	backgroundColor : '#4A6F78',
 	layout: 'horizontal',
-	height: 55	
+	height: 65	
 });
 
 var labelTu = Ti.UI.createLabel({
@@ -178,6 +179,48 @@ var viewContainerTu = Ti.UI.createView({
 	width: '100%',
 	layout: 'vertical'
 });
+
+//llenar Tu
+var tbl_data = []; 
+
+for (var i = 0; i < 9; i++){
+	 var row = Ti.UI.createTableViewRow({
+		backgroundColor: 'white',
+		layout: 'horizontal',
+		left: 10
+	 }); 
+	 var viewImage = Ti.UI.createView({
+	 	width: '50px'
+	 });
+	 var viewLabel = Ti.UI.createView({
+		width: '80%'	 		
+	 });		  
+	 var label = Ti.UI.createLabel({ 
+	 	text: 'It is a long established fact and ramen profitable ' + (i+1),
+ 		font : {
+			fontSize : 25,
+		}
+	}); 
+	var image = Ti.UI.createImageView({ 
+		image: '/icons/6_social_person.png',
+	}); 
+	
+	viewImage.add(image);
+	viewLabel.add(label);
+
+	row.add(viewImage); 
+	row.add(viewLabel); 
+	tbl_data.push(row); 
+} 
+
+var table1 = Titanium.UI.createTableView({ 
+	data: tbl_data,
+	top: 5,
+	height: '85%',
+	width: '95%'
+});
+
+viewContainerTu.add(table1);
 
 var viewSeparator = Ti.UI.createView({
     width: '0.5%',
@@ -200,9 +243,51 @@ var labelAmigos = Ti.UI.createLabel({
 var viewContainerAmigos = Ti.UI.createView({
 	height: '100%',
 	width: '100%',
-	layout: 'vertical',
-	backgroundColor: 'gray'
+	layout: 'vertical'
 });
+
+//llenar Amigos
+var tbl_data2 = []; 
+
+for (var i = 0; i < 6; i++){
+	 var row = Ti.UI.createTableViewRow({
+		backgroundColor: 'white',
+		layout: 'horizontal',
+		right: 5
+	 }); 
+	 var viewImage = Ti.UI.createView({
+	 	width: '50px'
+	 });
+	 var viewLabel = Ti.UI.createView({
+		width: '80%'	 		
+	 });		  
+	 var label = Ti.UI.createLabel({ 
+	 	text: 'It is a long established fact and ramen profitable ' + (i+1),
+ 		font : {
+			fontSize : 25,
+		}
+	}); 
+	var image = Ti.UI.createImageView({ 
+		image: '/icons/6_social_person.png',
+	}); 
+	
+	viewImage.add(image);
+	viewLabel.add(label);
+
+	row.add(viewLabel); 
+	row.add(viewImage); 
+	tbl_data2.push(row); 
+} 
+
+var table2 = Titanium.UI.createTableView({ 
+	data: tbl_data2,
+	top: 5,
+	height: '85%',
+	width: '95%'
+});
+
+viewContainerAmigos.add(table2);
+
 
 var viewContainerScrollable = Ti.UI.createScrollableView({
 	views: [viewContainerTu, viewContainerAmigos],
@@ -217,7 +302,6 @@ labelAmigos.addEventListener('click',function(e){
 labelTu.addEventListener('click',function(e){
 	viewContainerScrollable.setCurrentPage(0);
 });
-
 
 
 //menu
