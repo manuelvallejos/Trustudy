@@ -5,7 +5,7 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.082000 seconds on emulator to get ready
+[DEBUG] waited 0.048000 seconds on emulator to get ready
 [DEBUG] com.trustudy installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
@@ -15,10 +15,17 @@ Logfile initialized
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\android\images\logo.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\images\logo.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\app.js => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\app.js
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\gridlines.js => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\gridlines.js
+[TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\1-navigation-back.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\1-navigation-back.png
+[TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\1-navigation-forward.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\1-navigation-forward.png
+[TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\1_navigation_collapse.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\1_navigation_collapse.png
+[TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\1_navigation_expand.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\1_navigation_expand.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\2_action_about.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\2_action_about.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\2_action_help.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\2_action_help.png
+[TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\2_action_search.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\2_action_search.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\3_rating_favorite.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\3_rating_favorite.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\4_collections_view_as_list.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\4_collections_view_as_list.png
+[TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\5-content-new-attachment.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\5-content-new-attachment.png
+[TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\5-content-new.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\5-content-new.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\5-content-paste.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\5-content-paste.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\6_social_add_group.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\6_social_add_group.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\6_social_group.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\6_social_group.png
@@ -70,10 +77,17 @@ Logfile initialized
 [INFO] Compiling Android Resources... This could take some time
 [DEBUG] Android classes.dex built
 [DEBUG] creating unsigned apk: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\app-unsigned.apk
+[DEBUG] from resource zip => assets/Resources/icons/1-navigation-back.png
+[DEBUG] from resource zip => assets/Resources/icons/1-navigation-forward.png
+[DEBUG] from resource zip => assets/Resources/icons/1_navigation_collapse.png
+[DEBUG] from resource zip => assets/Resources/icons/1_navigation_expand.png
 [DEBUG] from resource zip => assets/Resources/icons/2_action_about.png
 [DEBUG] from resource zip => assets/Resources/icons/2_action_help.png
+[DEBUG] from resource zip => assets/Resources/icons/2_action_search.png
 [DEBUG] from resource zip => assets/Resources/icons/3_rating_favorite.png
 [DEBUG] from resource zip => assets/Resources/icons/4_collections_view_as_list.png
+[DEBUG] from resource zip => assets/Resources/icons/5-content-new-attachment.png
+[DEBUG] from resource zip => assets/Resources/icons/5-content-new.png
 [DEBUG] from resource zip => assets/Resources/icons/5-content-paste.png
 [DEBUG] from resource zip => assets/Resources/icons/6_social_add_group.png
 [DEBUG] from resource zip => assets/Resources/icons/6_social_group.png
@@ -139,6 +153,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.047000 seconds on emulator to get ready
+[DEBUG] waited 0.055000 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

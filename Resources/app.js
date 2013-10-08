@@ -442,11 +442,90 @@ var labelRespuestas = Ti.UI.createLabel({
 		fontSize : 30
 	},
 	color : '#4A6F78'
-
 });
+
+var barraAnteriorSiguiente = Ti.UI.createView({
+	layout: 'horizontal',
+	width: '128px',
+	height: '64px',
+	backgroundColor: 'white'	
+});
+
+var imageAnterior = Ti.UI.createImageView({
+	image: '/icons/1-navigation-back.png'
+});
+
+var imageSiguiente = Ti.UI.createImageView({
+	image: '/icons/1-navigation-forward.png'
+});
+
+barraAnteriorSiguiente.add(imageAnterior);
+barraAnteriorSiguiente.add(imageSiguiente);
+
+
+var viewPregunta1 = Ti.UI.createView({
+	width: '96%',
+	height: '20%',
+	layout: 'vertical',
+	top: '30',
+	backgroundColor: 'white'
+});
+
+var labelPregunta1 = Ti.UI.createLabel({
+	text : '¿En qué casos se usa el Test de Chow y cómo se aplica?',
+	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font : {
+		fontSize : 30
+	}
+});
+
+var labelRamo1 = Ti.UI.createLabel({
+	text : 'IN4402',
+	textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font : {
+		fontSize : 25
+	},
+	color : '#4A6F78'
+});
+
+
+viewPregunta1.add(labelRamo1);
+viewPregunta1.add(labelPregunta1);
+
+var barraBotones = Ti.UI.createView({
+	layout: 'horizontal',
+	width: '256px',
+	height: '64px',
+	backgroundColor: 'white'	
+});
+
+var imageBuenaPregunta = Ti.UI.createImageView({
+	image: '/icons/1_navigation_collapse.png'
+});
+
+var imageMalaPregunta = Ti.UI.createImageView({
+	image: '/icons/1_navigation_expand.png'
+});
+
+var imageAdjuntarRespuesta = Ti.UI.createImageView({
+	image: '/icons/5-content-new-attachment.png'
+});
+
+var imageResponder = Ti.UI.createImageView({
+	image: '/icons/5-content-new.png'
+});
+
+barraBotones.add(imageBuenaPregunta);
+barraBotones.add(imageMalaPregunta);
+barraBotones.add(imageAdjuntarRespuesta);
+barraBotones.add(imageResponder);
 
 respuestas.add(labelRespuestas);
 viewContainer3.add(respuestas);
+viewContainer3.add(barraAnteriorSiguiente);
+viewContainer3.add(viewPregunta1);
+viewContainer3.add(barraBotones);
+
 
 //view Container 4
 
