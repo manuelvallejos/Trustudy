@@ -5,7 +5,7 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.064000 seconds on emulator to get ready
+[DEBUG] waited 0.082000 seconds on emulator to get ready
 [DEBUG] com.trustudy installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
@@ -19,6 +19,7 @@ Logfile initialized
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\2_action_help.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\2_action_help.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\3_rating_favorite.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\3_rating_favorite.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\4_collections_view_as_list.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\4_collections_view_as_list.png
+[TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\5-content-paste.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\5-content-paste.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\6_social_add_group.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\6_social_add_group.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\6_social_group.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\6_social_group.png
 [TRACE] COPYING CREATED FILE: C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\Resources\icons\6_social_person.png => C:\Users\Manuel\Documents\Titanium_Studio_Workspace\Trustudy\build\android\bin\assets\Resources\icons\6_social_person.png
@@ -73,6 +74,7 @@ Logfile initialized
 [DEBUG] from resource zip => assets/Resources/icons/2_action_help.png
 [DEBUG] from resource zip => assets/Resources/icons/3_rating_favorite.png
 [DEBUG] from resource zip => assets/Resources/icons/4_collections_view_as_list.png
+[DEBUG] from resource zip => assets/Resources/icons/5-content-paste.png
 [DEBUG] from resource zip => assets/Resources/icons/6_social_add_group.png
 [DEBUG] from resource zip => assets/Resources/icons/6_social_group.png
 [DEBUG] from resource zip => assets/Resources/icons/6_social_person.png
@@ -137,6 +139,6 @@ Logfile initialized
 [DEBUG] Waiting for device to be ready ...
 [TRACE] adb devices returned 1 devices/emulators
 [DEBUG] Device connected... (waited 0 seconds)
-[DEBUG] waited 0.046000 seconds on emulator to get ready
+[DEBUG] waited 0.047000 seconds on emulator to get ready
 [INFO] Installing application on device
 [INFO] Application installed. Launch from drawer on Home Screen

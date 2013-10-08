@@ -195,7 +195,7 @@ for (var i = 0; i < 7; i++){
 		width: '87%' 		
 	 });		  
 	 var label = Ti.UI.createLabel({ 
-	 	text: 'It is a long established fact and ramen profitable ' + (i+1),
+	 	text: 'Esta es tu notificación de prueba número ' + (i+1),
  		font : {
 			fontSize : 25,
 		}
@@ -263,7 +263,7 @@ for (var i = 0; i < 6; i++){
 	 		
 	 });		  
 	 var label = Ti.UI.createLabel({ 
-	 	text: 'It is a long established fact and ramen profitable ' + (i+1),
+	 	text: 'Esta es la actividad de tus amigos número ' + (i+1),
  		font : {
 			fontSize : 25,
 		}
@@ -341,6 +341,38 @@ var viewContainerApuntes = Ti.UI.createView({
 //llenar Apuntes
 var tbl_data3 = []; 
 
+//borrador
+ var rw = Ti.UI.createTableViewRow({
+	backgroundColor: 'white',
+	layout: 'horizontal',
+	left: 10,
+ }); 
+ var viwImage = Ti.UI.createView({
+ 	width: '50px'
+ });
+ var viwLabel = Ti.UI.createView({
+	left: 0,
+	width: '87%' 		
+ });		  
+ var lbel = Ti.UI.createLabel({ 
+ 	text: 'Borrador',
+	font : {
+		fontSize : 30,
+		fontStyle: 'bold'
+	}
+}); 
+var imge = Ti.UI.createImageView({ 
+	image: '/icons/5-content-paste.png',
+}); 
+
+viwImage.add(imge);
+viwLabel.add(lbel);
+
+rw.add(viwImage); 
+rw.add(viwLabel); 
+tbl_data3.push(rw); 
+
+
 for (var i = 0; i < 5; i++){
 	 var row = Ti.UI.createTableViewRow({
 		backgroundColor: 'white',
@@ -376,11 +408,18 @@ for (var i = 0; i < 5; i++){
 var table3 = Titanium.UI.createTableView({ 
 	data: tbl_data3,
 	top: 15,
-	height: '85%',
+	height: '60%',
 	width: '95%'
 });
 
+var buttonAdjuntarApunte = Ti.UI.createButton({
+    title: 'Subir Apunte',
+    width: '50%',
+    top: 15
+});
+
 viewContainerApuntes.add(table3);
+viewContainerApuntes.add(buttonAdjuntarApunte);
 
 apuntes.add(labelApuntes);
 viewContainer2.add(apuntes);
