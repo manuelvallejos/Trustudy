@@ -444,25 +444,6 @@ var labelRespuestas = Ti.UI.createLabel({
 	color : '#4A6F78'
 });
 
-var barraAnteriorSiguiente = Ti.UI.createView({
-	layout: 'horizontal',
-	width: '128px',
-	height: '64px',
-	backgroundColor: 'white'	
-});
-
-var imageAnterior = Ti.UI.createImageView({
-	image: '/icons/1-navigation-back.png'
-});
-
-var imageSiguiente = Ti.UI.createImageView({
-	image: '/icons/1-navigation-forward.png'
-});
-
-barraAnteriorSiguiente.add(imageAnterior);
-barraAnteriorSiguiente.add(imageSiguiente);
-
-
 var viewPregunta1 = Ti.UI.createView({
 	width: '96%',
 	height: '20%',
@@ -522,7 +503,6 @@ barraBotones.add(imageResponder);
 
 respuestas.add(labelRespuestas);
 viewContainer3.add(respuestas);
-viewContainer3.add(barraAnteriorSiguiente);
 viewContainer3.add(viewPregunta1);
 viewContainer3.add(barraBotones);
 
