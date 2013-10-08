@@ -5,8 +5,6 @@ var win = Titanium.UI.createWindow({
 	exitOnClose: true
 });
 
-
-
 //-------Views to hold content-------
 
 var winView1 = Ti.UI.createView({
@@ -51,7 +49,7 @@ var viewContainer1 = Ti.UI.createView({
 	borderRadius :1,
 });
 
-var viewContainer2 = Ti.UI.createScrollView({
+var viewContainer2 = Ti.UI.createView({
 	height: '100%',
 	width: '100%',
 	top:60,
@@ -61,7 +59,7 @@ var viewContainer2 = Ti.UI.createScrollView({
 	borderRadius :1
 });
 
-var viewContainer3 = Ti.UI.createScrollView({
+var viewContainer3 = Ti.UI.createView({
 	height: '100%',
 	width: '100%',
 	top:60,	
@@ -183,7 +181,7 @@ var viewContainerTu = Ti.UI.createView({
 //llenar Tu
 var tbl_data = []; 
 
-for (var i = 0; i < 9; i++){
+for (var i = 0; i < 7; i++){
 	 var row = Ti.UI.createTableViewRow({
 		backgroundColor: 'white',
 		layout: 'horizontal',
@@ -193,7 +191,8 @@ for (var i = 0; i < 9; i++){
 	 	width: '50px'
 	 });
 	 var viewLabel = Ti.UI.createView({
-		width: '80%'	 		
+		left: 5,
+		width: '87%' 		
 	 });		  
 	 var label = Ti.UI.createLabel({ 
 	 	text: 'It is a long established fact and ramen profitable ' + (i+1),
@@ -215,7 +214,7 @@ for (var i = 0; i < 9; i++){
 
 var table1 = Titanium.UI.createTableView({ 
 	data: tbl_data,
-	top: 5,
+	top: 15,
 	height: '85%',
 	width: '95%'
 });
@@ -253,13 +252,15 @@ for (var i = 0; i < 6; i++){
 	 var row = Ti.UI.createTableViewRow({
 		backgroundColor: 'white',
 		layout: 'horizontal',
-		right: 5
+		left: 10
 	 }); 
 	 var viewImage = Ti.UI.createView({
 	 	width: '50px'
 	 });
 	 var viewLabel = Ti.UI.createView({
-		width: '80%'	 		
+		left: 5,
+		width: '87%' 		
+	 		
 	 });		  
 	 var label = Ti.UI.createLabel({ 
 	 	text: 'It is a long established fact and ramen profitable ' + (i+1),
@@ -274,14 +275,14 @@ for (var i = 0; i < 6; i++){
 	viewImage.add(image);
 	viewLabel.add(label);
 
-	row.add(viewLabel); 
 	row.add(viewImage); 
+	row.add(viewLabel); 
 	tbl_data2.push(row); 
 } 
 
 var table2 = Titanium.UI.createTableView({ 
 	data: tbl_data2,
-	top: 5,
+	top: 15,
 	height: '85%',
 	width: '95%'
 });
@@ -331,10 +332,60 @@ var labelApuntes = Ti.UI.createLabel({
 	color : '#4A6F78'
 });
 
+var viewContainerApuntes = Ti.UI.createView({
+	height: '100%',
+	width: '100%',
+	layout: 'vertical'
+});
+
+//llenar Apuntes
+var tbl_data3 = []; 
+
+for (var i = 0; i < 7; i++){
+	 var row = Ti.UI.createTableViewRow({
+		backgroundColor: 'white',
+		layout: 'horizontal',
+		left: 10
+	 }); 
+	 var viewImage = Ti.UI.createView({
+	 	width: '50px'
+	 });
+	 var viewLabel = Ti.UI.createView({
+		left: 5,
+		width: '87%' 		
+	 });		  
+	 var label = Ti.UI.createLabel({ 
+	 	text: 'It is a long established fact and ramen profitable ' + (i+1),
+ 		font : {
+			fontSize : 25,
+		}
+	}); 
+	var image = Ti.UI.createImageView({ 
+		image: '/icons/6_social_person.png',
+	}); 
+	
+	viewImage.add(image);
+	viewLabel.add(label);
+
+	row.add(viewImage); 
+	row.add(viewLabel); 
+	tbl_data3.push(row); 
+} 
+
+var table3 = Titanium.UI.createTableView({ 
+	data: tbl_data,
+	top: 15,
+	height: '85%',
+	width: '95%'
+});
+
+viewContainerApuntes.add(table3);
+
 apuntes.add(labelApuntes);
 viewContainer2.add(apuntes);
+viewContainer2.add(viewContainerApuntes);
 
-// view Container 2
+// view Container 3
 
 //Respuestas
 
