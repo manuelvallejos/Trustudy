@@ -341,7 +341,7 @@ var viewContainerApuntes = Ti.UI.createView({
 //llenar Apuntes
 var tbl_data3 = []; 
 
-for (var i = 0; i < 7; i++){
+for (var i = 0; i < 5; i++){
 	 var row = Ti.UI.createTableViewRow({
 		backgroundColor: 'white',
 		layout: 'horizontal',
@@ -351,17 +351,18 @@ for (var i = 0; i < 7; i++){
 	 	width: '50px'
 	 });
 	 var viewLabel = Ti.UI.createView({
-		left: 5,
+		left: 0,
 		width: '87%' 		
 	 });		  
 	 var label = Ti.UI.createLabel({ 
-	 	text: 'It is a long established fact and ramen profitable ' + (i+1),
+	 	text: 'MA200' + (i+1),
  		font : {
-			fontSize : 25,
+			fontSize : 30,
+			fontStyle: 'bold'
 		}
 	}); 
 	var image = Ti.UI.createImageView({ 
-		image: '/icons/6_social_person.png',
+		image: '/icons/4_collections_view_as_list.png',
 	}); 
 	
 	viewImage.add(image);
@@ -373,7 +374,7 @@ for (var i = 0; i < 7; i++){
 } 
 
 var table3 = Titanium.UI.createTableView({ 
-	data: tbl_data,
+	data: tbl_data3,
 	top: 15,
 	height: '85%',
 	width: '95%'
